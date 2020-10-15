@@ -6,6 +6,7 @@
     var myScore;
     var explosionSound;
     var shotSound;
+    var myMusic = new sound("./sounds/bgmusic.mp3");
     var started = false;
 
     var cannonImage = new Image();
@@ -44,6 +45,7 @@
     var myGameArea = {
       canvas : document.createElement("canvas"),
       start : async function() {
+        myMusic.play();
         started = true;
         this.score = 0;
         this.canvas.width = 640;
